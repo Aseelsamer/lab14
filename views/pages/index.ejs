@@ -1,0 +1,17 @@
+
+<%- include('../layout/header')%>
+<body>
+  <header>
+    <%- include('../layout/nav')%>
+  </header>
+  <ul id="cards">
+    <h2> There are <%= books.length %> Books</h2><br>
+    <% books.forEach(data=>{ %><br>
+    <h1> <%= data.title %></h3><br>
+    <h3><%= data.author %></h4><br>
+    <img src=" <%= data.image_url %>" alt="">
+    <a id="detailIndex" href="/books/<%= data.id%>">View Details</a>
+    <% }) %>
+  </ul><br>
+<%- include('../layout/footer')%>
+  
